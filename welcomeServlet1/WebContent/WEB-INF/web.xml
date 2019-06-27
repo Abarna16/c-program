@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>welcomeServlet1</display-name>
+  <welcome-file-list>
+    <welcome-file>login.html</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+  
+  <servlet>  
+<servlet-name>View</servlet-name>  
+<servlet-class>com.zoho.blog.View</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>View</servlet-name>  
+<url-pattern>/View</url-pattern>  
+</servlet-mapping> 
+<servlet>  
+<servlet-name>Add</servlet-name>  
+<servlet-class>com.zoho.blog.Add</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>Add</servlet-name>  
+<url-pattern>/Add</url-pattern>  
+</servlet-mapping> 
+
+  
+  <servlet>  
+<servlet-name>json</servlet-name>  
+<servlet-class>com.zoho.CreateJsonFile</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>json</servlet-name>  
+<url-pattern>/CreateJsonFile</url-pattern>  
+</servlet-mapping>  
+  
+  <servlet>
+<servlet-name>abar</servlet-name>
+<servlet-class>com.zoho.LoginValidate</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>abar</servlet-name>
+<url-pattern>/LoginValidate</url-pattern>
+</servlet-mapping>
+
+
+
+<servlet>
+<servlet-name>welcome</servlet-name>
+<servlet-class>com.zoho.WelcomePage</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>welcome</servlet-name>
+<url-pattern>/WelcomePage</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>Logout</servlet-name>
+<servlet-class>com.zoho.Logout</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>Logout</servlet-name>
+<url-pattern>/Logout</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>abarna</servlet-name>
+<servlet-class>com.zoho.DisplayAsXml</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>abarna</servlet-name>
+<url-pattern>/DisplayAsXml</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>Header</servlet-name>
+<servlet-class>com.zoho.SecondServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>Header</servlet-name>
+<url-pattern>/SecondServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>abarna1</servlet-name>
+<servlet-class>com.zoho.ServletContext1</servlet-class>
+<init-param>  
+<param-name>driver</param-name>  
+<param-value>JdbcOdbcDriver</param-value>  
+</init-param> 
+
+</servlet>
+<servlet-mapping>
+<servlet-name>abarna1</servlet-name>
+<url-pattern>/ServletContext1</url-pattern>
+</servlet-mapping>
+
+<context-param>
+<param-name>System</param-name>
+<param-value>Windows</param-value>
+</context-param>
+
+<servlet>
+<servlet-name>abarna2</servlet-name>
+<servlet-class>com.zoho.ServletContext2</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>abarna2</servlet-name>
+<url-pattern>/ServletContext2</url-pattern>
+</servlet-mapping>
+
+
+
+<servlet>
+<servlet-name>mapping</servlet-name>
+<servlet-class>com.zoho.Mapping</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>mapping</servlet-name>
+<url-pattern>/mapping</url-pattern>
+</servlet-mapping>
+
+
+
+ <servlet>  
+    <description></description>  
+   
+    <servlet-name>LoginServlet</servlet-name>  
+    <servlet-class>com.zoho.SessionLoginServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>LoginServlet</servlet-name>  
+    <url-pattern>/SessionLoginServlet</url-pattern>  
+  </servlet-mapping>  
+  <!-- 
+  
+ <servlet>  
+    <description></description>  
+   
+    <servlet-name>BlogView</servlet-name>  
+    <servlet-class>com.zoho.ReadJson</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>BlogView</servlet-name>  
+    <url-pattern>/ReadJson</url-pattern>  
+  </servlet-mapping>   -->
+  
+  <listener>
+  <listener-class>com.zoho.SessionListener</listener-class>
+  </listener>
+  
+   <listener>
+  <listener-class>com.zoho.RequestListener</listener-class>
+  </listener> 
+  
+  <listener>
+  <listener-class>com.zoho.HttpSessionAttribute</listener-class>
+  </listener>
+  
+  <listener>
+  <listener-class>com.zoho.HttpSessionBinding</listener-class>
+  </listener>
+  
+  <servlet> 
+   
+    <display-name>SessionWelcome</display-name>  
+    <servlet-name>SessionWelcome</servlet-name>  
+    <servlet-class>com.zoho.SessionWelcome</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>SessionWelcome</servlet-name>  
+    <url-pattern>/SessionWelcome</url-pattern>  
+  </servlet-mapping>  
+  
+  <servlet>  
+    <description></description>  
+    <display-name>SessionLogoutServlet</display-name>  
+    <servlet-name>SessionLogoutServlet</servlet-name>  
+    <servlet-class>com.zoho.SessionLogoutServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>SessionLogoutServlet</servlet-name>  
+    <url-pattern>/SessionLogoutServlet</url-pattern>  
+  </servlet-mapping>  
+  
+  
+  
+  
+  <servlet>  
+<servlet-name>s1</servlet-name>  
+<servlet-class>com.zoho.HelloServlet</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>s1</servlet-name>  
+<url-pattern>/filter</url-pattern>  
+</servlet-mapping>  
+  
+<filter>  
+<filter-name>f1</filter-name>  
+<filter-class>com.zoho.LoginFilter</filter-class>  
+</filter>  
+   
+<filter-mapping>  
+<filter-name>f1</filter-name>  
+<url-pattern>/filter</url-pattern>  
+</filter-mapping>  
+  
+  
+  
+</web-app>

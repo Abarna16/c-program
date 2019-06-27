@@ -1,0 +1,11 @@
+ <web-fragment>
+ <filter>
+<filter-name>abar</filter-name>
+<filter-class>com.zoho.LoginValidate</filter-class>
+</filter>
+
+<filter-mapping>
+<filter-name>abar</filter-name>
+<url-pattern>/LoginValidate</url-pattern>
+</filter-mapping> 
+</web-fragment>

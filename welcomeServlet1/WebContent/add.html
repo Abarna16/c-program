@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-size: 28px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #111;
+}
+.active {
+  background-color: #4CAF50;
+}
+#form
+ {
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 10%;
+            border: 5px solid black;
+            width:60%;
+            height:40%;
+             background-image:url('img1.jpg');
+        }
+        h4
+        {
+        text-align: center;
+        }
+        .header1{
+            width:97%;
+                        position: -webkit-sticky; /* Safari */
+            position: sticky;
+           
+            color:white;
+            background:gray;
+            text-align: center;
+            border:1px solid black;
+            border-bottom: none;
+           
+            padding:20px;
+   
+            }
+             .header{
+            width:90%;
+            color:white;
+            background:gray;
+            text-align: center;
+            border:1px solid black;
+            border-bottom: none;
+           
+            padding:20px;
+   
+            }
+            body
+            {
+                 background-image:url('baby.jpg');
+                 background-size:cover;
+            }
+             #from {
+         padding: 16px;
+         width:30%;
+         margin-top:3%;
+         margin-left:35%;
+          margin-right:20%;
+         border-radius:15px;
+        // border: 2px solid black;
+    margin-bottom:50px;
+    }
+    #abc{padding-top: 12px 20px; display: inline-block;  width:100%; margin-left: 80px ; margin-top:5px }
+    #ab{margin-left: 150px ;}
+            
+}
+</style>
+</head>
+<body>
+
+<div class="header1">
+  <h2>BOOK DETAILS</h2>
+  <p></p>
+</div>
+
+<ul>
+  <li style="float:right"><a  href="Home.html">Home</a></li>
+  <li style="float:right"><a href="add.html">Post</a></li>
+  <li style="float:right"><a href="View">Details</a></li>
+</ul>
+
+
+<body>
+
+<div class="container-fluid" id="from">
+  
+  <form action="Add" >
+   <h4 class=header>Add Detail</h4>
+    <div class="form-group">
+      <div class="row">
+      <div class="col-sm-8">
+      <label for="user" id="aa"> Subject:</label>
+         <input type="text"  id="aaa"class="form-control " name="subject" >
+      </div>
+       </div>
+    </div><br>
+     <div class="form-group">
+     <div class="row">    
+       <div class="col-sm-8">
+         <label for="pwd" id="aa">Description:</label>
+         <textarea id="aaa" class="form-control col-sm-4" name="description"></textarea>
+        </div>
+     </div>
+    </div><br>
+    <div class="form-group">
+     <div class="row">    
+       <div class="col-sm-8">
+         <label for="pwd" id="aa">Author Name:</label>
+         <input type="text" id="aaa"class="form-control col-sm-4" name="author">
+        </div>
+     </div>
+    </div><br>
+    
+    <center><input type="submit" value="Submit"></center>
+    
+  </form>
+</div>
+
+
+</body>
+</html>
