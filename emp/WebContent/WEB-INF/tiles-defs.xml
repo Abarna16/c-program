@@ -1,0 +1,132 @@
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+ 
+<tiles-definitions>
+
+<definition name="baseLayout" path="/baseLayout.jsp">
+<put name="header" value="/header.jsp"/>
+<put name="menu" value="/menu.jsp"/>
+<put name="body" value="/body.jsp"/>
+<put name="footer" value="/footer.jsp"/>
+</definition>
+<definition name="baseLayout1" path="/baseLayout1.jsp">
+<put name="header" value="/header.jsp"/>
+
+<put name="body" value="/body.jsp"/>
+<put name="footer" value="/footer.jsp"/>
+</definition>
+<definition name="user1" extends="baseLayout">
+
+<put name="body" value="/userlogin.jsp"/>
+</definition>
+
+<definition name="add2" extends="baseLayout1">
+
+<put name="body" value="/adddetail.jsp"/>
+</definition>
+
+<definition name="edit2" extends="baseLayout1">
+
+<put name="body" value="/editdetail.jsp"/>
+</definition>
+
+<definition name="delete2" extends="baseLayout1">
+
+<put name="body" value="/deletedetail.jsp"/>
+</definition>
+
+<definition name="view1" extends="baseLayout1">
+
+<put name="body" value="/viewdetail1.jsp"/>
+</definition>
+
+
+<definition name="login" extends="baseLayout">
+
+<put name="body" value="/login.jsp"/>
+</definition>
+
+
+<definition name="success" extends="baseLayout1">
+<put name="body" value="/success.jsp"/>
+</definition>
+
+<definition name="failure" extends="baseLayout">
+<put name="body" value="/failure.jsp"/>
+</definition>
+
+<definition name="welcome" extends="baseLayout">
+<put name="body" value="/profile.jsp"/>
+</definition>
+
+<definition name="logout" extends="baseLayout">
+<put name="body" value="/logout.jsp"/>
+</definition>
+
+<definition name="profile" extends="baseLayout1">
+<put name="body" value="/profile.jsp"/>
+</definition>
+
+<definition name="addsuccess" extends="baseLayout1">
+<put name="body" value="/addsuccess.jsp"/>
+</definition>
+
+<definition name="editsuccess" extends="baseLayout1">
+<put name="body" value="/editsuccess.jsp"/>
+</definition>
+
+<definition name="userloginsuccess" extends="baseLayout">
+<put name="body" value="/userprofile.jsp"/>
+</definition>
+
+<definition name="viewsuccess" extends="baseLayout1">
+<put name="body" value="/success.jsp"/>
+</definition>
+
+<definition name="viewsuccess" extends="baseLayout">
+<put name="body" value="/viewsuccess1.jsp"/>
+</definition>
+
+<definition name="deletesuccess" extends="baseLayout1">
+<put name="body" value="/deletesuccess.jsp"/>
+</definition>
+
+<definition name="userview1" extends="baseLayout">
+<put name="body" value="/userviewdetail.jsp"/>
+</definition>
+
+
+<definition name="userviewsuccess" extends="baseLayout1">
+<put name="body" value="/userviewsuccess.jsp"/>
+</definition>
+
+
+</tiles-definitions> 
+
+
+
+ 
+
+<!-- <tiles-definitions> 
+
+
+   
+
+    <definition name="baseLayout" path="/baseLayout.jsp">
+       
+        <put name="header" value="/header.jsp" />
+        <put name="menu"   value="/menu.jsp" />
+        <put name="body"   value="/body.jsp" />
+        <put name="footer" value="/footer.jsp" />        
+    </definition>
+    <definition name="struts" extends="baseLayout">
+
+        <put name="body" value="/struts.jsp" />
+    </definition>
+    <definition name="hybernate" extends="baseLayout">
+       
+        <put name="body" value="/hybernate.jsp" />
+    </definition>
+</tiles-definitions>
+ -->

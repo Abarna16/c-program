@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>StrutsDb</display-name>
+  
+  <servlet>
+  <servlet-name>action</servlet-name>
+	<servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+	<init-param>
+	<param-name>config</param-name>
+	<param-value>/WEB-INF/struts-config.xml</param-value>
+	</init-param>
+	
+	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>action</servlet-name>
+  <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+   <listener>
+  <listener-class>com.action.RequestListener</listener-class>
+  </listener> 
+  
+  
+   <servlet>  
+    <description></description>  
+   
+    <servlet-name>LoginServlet</servlet-name>  
+    <servlet-class>com.action.SessionLoginServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>LoginServlet</servlet-name>  
+    <url-pattern>/SessionLoginServlet</url-pattern>  
+  </servlet-mapping>
+
+  <filter>
+        <filter-name>Authorization</filter-name>
+        <filter-class>com.action.AuthFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Authorization</filter-name>
+        <url-pattern>/Link.do</url-pattern>
+    </filter-mapping>
+  
+ <welcome-file-list>
+   
+   	<welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

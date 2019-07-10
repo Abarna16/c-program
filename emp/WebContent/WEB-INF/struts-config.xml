@@ -1,0 +1,88 @@
+<struts-config>
+   
+  
+<form-beans>
+<form-bean name="signupform" type="com.form.SignupForm"/>
+<form-bean name="addform" type="com.form.AddForm"/>
+<form-bean name="viewform" type="com.form.ViewForm"/>
+<form-bean name="loginform" type="com.form.LoginForm"/>
+</form-beans>
+   
+
+    <action-mappings>
+    
+    
+    	 <action path="/register" type="com.action.SignupAction" name="signupform" input="/index.jsp">
+        	<forward name="success" path="success" />
+        </action>  
+        <!--  <action path="/add1" type="com.action.AddAction" name="addform" input="/index.jsp">
+        	<forward name="addsuccess" path="addsuccess" />
+        	<forward name="failure" path="failure"/>
+        </action>   -->
+        
+         <action path="/edit1" type="com.action.EditAction" name="addform" input="/index.jsp">
+        	<forward name="editsuccess" path="editsuccess" />
+        	<forward name="failure" path="failure"/>
+        </action>  
+       <!--   <action path="/view11" type="com.action.ViewAction" name="viewform" input="/index.jsp">
+         <forward name="viewsuccess" path="viewsuccess" />
+        </action>   -->
+        
+        <action path="/userview11" type="com.action.UserViewAction" name="viewform" input="/index.jsp">
+         <forward name="userviewsuccess" path="userviewsuccess" />
+        
+        </action>  
+        
+        
+        
+          <action path="/delete11" type="com.action.DeleteAction" name="viewform" input="/index.jsp">
+         <forward name="deletesuccess" path="deletesuccess" />
+         <forward name="failure" path="failure"/>
+        </action>  
+        
+         <action path="/login1" validate="true"  name="loginform" type="com.action.LoginAction" input="/index.jsp">
+    <forward name="welcome" path="welcome"/>
+    <forward name="failure" path="failure"/>
+    
+    	</action>
+    	
+    	 <action path="/userlogin1" validate="true"  name="loginform" type="com.action.UserLoginAction" input="/index.jsp">
+    <forward name="userloginsuccess" path="userloginsuccess"/>
+    <forward name="failure" path="failure"/>
+    
+    	</action>
+    	
+    	     
+    	      <action path="/Link1" parameter="method" type="com.action.LinkAction">
+          			   <forward name="login" path="login"/>
+                            <forward name="userview1" path="userview1"/>
+                             <forward name="logout" path="logout"/>
+            
+            </action>
+    	     
+        <action path="/Link" parameter="method"  name="addform"  type="com.action.LinkAction">
+            <forward name="user1" path="user1"/>
+           <forward name="addsuccess" path="addsuccess" />
+        	<forward name="failure" path="failure"/>
+             <forward name="viewsuccess" path="viewsuccess" />
+             <forward name="profile" path="profile"/>
+             <forward name="add2" path="add2"/>
+              <forward name="edit2" path="edit2"/>
+              <forward name="view1" path="view1"/>
+               <forward name="delete2" path="delete2"/>
+               
+      
+        </action>
+    </action-mappings>
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+   <message-resources parameter="com/action/ApplicationResource"/>
+  
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+   
+</struts-config>
